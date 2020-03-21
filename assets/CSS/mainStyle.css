@@ -89,12 +89,15 @@ body {
     left: -100%;
     transition: 0.5s;
   }
-  .topNav nav.active {
-    left: 0;
+  .topNav nav.active{
+    left: -60%;
+  }
+  .topNav nav.active ul li a {
+    padding-left: 70%;
   }
   .topNav nav ul {
     display: block;
-    text-align: center;
+    text-align: left;
   }
   .topNav nav ul li a {
     border-bottom: 1px solid var(--darkBlue);
