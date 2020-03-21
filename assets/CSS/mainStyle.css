@@ -1,0 +1,139 @@
+:root {
+    --green:#20BF55;
+    --darkBlue:#0B4F6C;
+    --lightBlue:#01BAEF;
+    --white:#FBFBFF;
+    --gray:#757575;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation */
+.topNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background: var(--green);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  color: var(--white);
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+}
+
+.topNav nav {
+  float: right;
+}
+
+.topNav nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.topNav nav ul li {
+  list-style: none;
+}
+
+.topNav nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+.topNav nav ul li a:hover,
+.topNav nav ul li a.active {
+  color: var(--white);
+  background-color: var(--lightBlue);
+}
+
+.menuToggle {
+  color: var(--white);
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+/* Navigation */
+
+/* Breakpoints */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .topNav {
+    padding: 0 40px;
+  }
+  .menuToggle{
+    display: block;
+  }
+  .topNav nav {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: var(--green);
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  .topNav nav.active {
+    left: 0;
+  }
+  .topNav nav ul {
+    display: block;
+    text-align: center;
+  }
+  .topNav nav ul li a {
+    border-bottom: 1px solid var(--darkBlue);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .topNav {
+    padding: 0 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .topNav {
+    padding: 0 40px;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .topNav {
+    padding: 0 60px;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .topNav {
+    padding: 0 80px;
+  }
+}
+/* Breakpoints */
