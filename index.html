@@ -86,7 +86,13 @@
                       required
                     />
 
-                    <button type="submit">Login</button>
+                    <button 
+                      type="submit"
+                      id="sign-in" 
+                      name="signin"
+                    >
+                      Sign In
+                    </button>
                   </div>
 
                   <div class="container" style="background-color:#f1f1f1">
@@ -138,15 +144,6 @@
                   </div>
 
                   <div class="container">
-                    <label><b>Username</b></label>
-                    <input
-                      type="text"
-                      placeholder="Enter Username"
-                      name="username"
-                      id="usernameReg"
-                      required
-                    />
-
                     <label><b>Email</b></label>
                     <input
                       type="email"
@@ -172,7 +169,13 @@
                       name="passwordRepeat"
                       required
                     />
-                    <button type="submit">Login</button>
+                    <button
+                      id="sign-up"
+                      type="submit"
+                      name="signup"
+                    >
+                      Sign Up
+                    </button>
                   </div>
 
                   <div class="container" style="background-color:#f1f1f1">
@@ -217,11 +220,74 @@
     </div>
     <!-- banner -->
 
-    <div id="content">
-        
+    <div class="content">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+        <!-- Container for the demo -->
+        <div
+          class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop"
+        >
+          <div
+            class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white"
+          >
+            <h2 class="mdl-card__title-text">
+              Firebase Email &amp; Password Authentication
+            </h2>
+          </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            <p>
+              Enter an email and password below and either sign in to an
+              existing account or sign up
+            </p>
+
+            <input
+              class="mdl-textfield__input"
+              style="display:inline;width:auto;"
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email"
+            />
+            &nbsp;&nbsp;&nbsp;
+            <input
+              class="mdl-textfield__input"
+              style="display:inline;width:auto;"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+            />
+            <br /><br />
+
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            <button
+              class="mdl-button mdl-js-button mdl-button--raised"
+              disabled
+              id="verify-email"
+              name="verify-email"
+            >
+              Send Email Verification
+            </button>
+            &nbsp;&nbsp;&nbsp;
+            <button
+              class="mdl-button mdl-js-button mdl-button--raised"
+              id="password-reset"
+              name="verify-email"
+            >
+              Send Password Reset Email
+            </button>
+
+            <!-- Container where we'll display the user details -->
+            <div class="user-details-container">
+              Firebase sign-in status:
+              <span id="sign-in-status">Unknown</span>
+              <div>Firebase auth <code>currentUser</code> object value:</div>
+              <pre><code id="account-details">null</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- content -->
-
 
     <script src="assets/SCRIPT/script.js"></script>
     <script src="assets/SCRIPT/firebase.js"></script>
@@ -243,17 +309,17 @@
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
 
     <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyDdi476d9Zkv-tGmbgwLg5Q0Fc-d2Oc2jQ",
-            authDomain: "webtechassessment2.firebaseapp.com",
-            databaseURL: "https://webtechassessment2.firebaseio.com",
-            projectId: "webtechassessment2",
-            storageBucket: "webtechassessment2.appspot.com",
-            messagingSenderId: "552477184206",
-            appId: "1:552477184206:web:0620b54b1dd74e6573c09f",
-            measurementId: "G-Q4YNRWMH0M"
-        };
-        firebase.initializeApp(firebaseConfig);
+      var firebaseConfig = {
+        apiKey: "AIzaSyDdi476d9Zkv-tGmbgwLg5Q0Fc-d2Oc2jQ",
+        authDomain: "webtechassessment2.firebaseapp.com",
+        databaseURL: "https://webtechassessment2.firebaseio.com",
+        projectId: "webtechassessment2",
+        storageBucket: "webtechassessment2.appspot.com",
+        messagingSenderId: "552477184206",
+        appId: "1:552477184206:web:0620b54b1dd74e6573c09f",
+        measurementId: "G-Q4YNRWMH0M"
+      };
+      firebase.initializeApp(firebaseConfig);
     </script>
     <!-- script -->
   </body>

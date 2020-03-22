@@ -44,12 +44,12 @@ function toggleSignIn(email, password) {
         alert(errorMessage);
       }
       console.log(error);
-      document.getElementById('quickstart-sign-in').disabled = false;
+      document.getElementById('sign-in').disabled = false;
       // [END_EXCLUDE]
     });
     // [END authwithemail]
   }
-  //document.getElementById('quickstart-sign-in').disabled = true;
+  //document.getElementById('sign-in').disabled = true;
 }
 
 
@@ -58,7 +58,6 @@ function submitRegister(e) {
   e.preventDefault();
 
   //Get Values
-  var username = getInputVal('usernameReg')
   var uMail = getInputVal('emailReg');
   var uPassword = getInputVal('passwordReg');
 
@@ -66,10 +65,10 @@ function submitRegister(e) {
   console.log(uMail);
   console.log(uPassword);
 
-  handleSignUp(username, uMail, uPassword)
+  handleSignUp(uMail, uPassword)
 }
 
-function handleSignUp(username, email, password) {
+function handleSignUp(email, password) {
   if (email.length < 4) {
     alert('Please enter an email address.');
     return;
@@ -80,7 +79,7 @@ function handleSignUp(username, email, password) {
   }
   // Create user with email and pass.
   // [START createwithemail]
-  firebase.auth().createUserWithEmailAndPassword(username, email, password).catch(function (error) {
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -129,7 +128,7 @@ function initApp() {
   // [START authstatelistener]
   firebase.auth().onAuthStateChanged(function (user) {
     // [START_EXCLUDE silent]
-    document.getElementById('quickstart-verify-email').disabled = true;
+    document.getElementById('verify-email').disabled = true;
     // [END_EXCLUDE]
     if (user) {
       // User is signed in.
@@ -141,31 +140,31 @@ function initApp() {
       var uid = user.uid;
       var providerData = user.providerData;
       // [START_EXCLUDE]
-      document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-      document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-      document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+      document.getElementById('sign-in-status').textContent = 'Signed in';
+      document.getElementById('sign-in').textContent = 'Sign out';
+      document.getElementById('account-details').textContent = JSON.stringify(user, null, '  ');
       if (!emailVerified) {
-        document.getElementById('quickstart-verify-email').disabled = false;
+        document.getElementById('verify-email').disabled = false;
       }
       // [END_EXCLUDE]
     } else {
       // User is signed out.
       // [START_EXCLUDE]
-      document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-      document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-      document.getElementById('quickstart-account-details').textContent = 'null';
+      document.getElementById('sign-in-status').textContent = 'Signed out';
+      document.getElementById('sign-in').textContent = 'Sign in';
+      document.getElementById('account-details').textContent = 'null';
       // [END_EXCLUDE]
     }
     // [START_EXCLUDE silent]
-    document.getElementById('quickstart-sign-in').disabled = false;
+    document.getElementById('sign-in').disabled = false;
     // [END_EXCLUDE]
   });
   // [END authstatelistener]
 
-  document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-  document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-  document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
-  document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
+  document.getElementById('sign-in').addEventListener('click', toggleSignIn, false);
+  document.getElementById('sign-up').addEventListener('click', handleSignUp, false);
+  document.getElementById('verify-email').addEventListener('click', sendEmailVerification, false);
+  document.getElementById('password-reset').addEventListener('click', sendPasswordReset, false);
 }
 
 window.onload = function () {
