@@ -391,6 +391,25 @@ a {
   background-color: var(--tertiary);
   color: var(--primary);
 }
+
+.githubLink {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.fa-heart {
+  color: var(--primary);
+}
+
+.madeBy {
+  padding-top: 2%;
+  text-align: center;
+}
+
+.githubLink:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
 /* Footer */
 
 /* Breakpoints */
@@ -481,9 +500,13 @@ a {
   .footerRight {
     text-align: center;
     padding-top: 20px;
+    padding-left: 40px;
     float: none;
   }
-  
+  .madeBy {
+    padding-top: 4%;
+    text-align: center;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

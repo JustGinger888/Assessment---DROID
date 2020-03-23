@@ -1,296 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Droid | Propety Management </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Droid | Propety Management</title>
 
-  <link
-  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-  rel="stylesheet"
-/>
-<link rel="stylesheet" href="assets/CSS/mainStyle.css" />
-</head>
-<body>
-<div class="topNav">
-  <div class="menuToggle">
-    <i class="fa fa-bars" aria-hidden="true"></i>
-  </div>
-  <div class="logo">DROID</div>
-  <nav>
-    <div class="leftNav">
-      <ul>
-        <li>
-          <a href="index.html">
-            <!-- <i class="fa fa-home fa-fw"></i>-->
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#" class="active">
-            <!--<i class="fa fa-users fa-fw"></i>-->
-            About
-          </a>
-        </li>
-        <li>
-          <a href="contact.html">
-            <!--<i class="fa fa-phone fa-fw"></i>-->
-            Contact
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <!--<i class="fa fa-columns fa-fw"></i>-->
-            Dashboard
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div id="LogReg" class="rightNav">
-      <ul>
-        <li>
-          <a
-            onclick="document.getElementById('id01').style.display='block'"
-            class="buttonLogin"
-            >Login</a
-          >
-
-          <div id="id01" class="modal">
-            <form id="loginForm" class="modal-content animate">
-              <div class="imgcontainer">
-                <h2>Login</h2>
-                <span
-                  onclick="document.getElementById('id01').style.display='none'"
-                  class="close"
-                  title="Close Modal"
-                  >&times;</span
-                >
-              </div>
-
-              <div class="container">
-                <label><b>Email</b></label>
-                <input
-                  type="email"
-                  placeholder="Enter email"
-                  name="email"
-                  id="emailLog"
-                  required
-                />
-
-                <label><b>Password</b></label>
-                <input
-                  type="password"
-                  placeholder="Enter Password"
-                  name="password"
-                  id="passwordLog"
-                  required
-                />
-
-                <button class="buttonLogin" type="submit" id="signIn" name="signin">
-                  Sign In
-                </button>
-              </div>
-
-              <div class="containerReset" style="background-color:#f1f1f1">
-                <button
-                  id="cancelButton"
-                  type="button"
-                  onclick="document.getElementById('id01').style.display='none'"
-                  class="cancelbtn"
-                >
-                  Cancel
-                </button>
-                <button type="button" id="passwordReset" name="verifyEmail" class="cancelbtn">
-                  Send Password Reset Email
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <script>
-            // Get the modal
-            var modal = document.getElementById("id01");
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            };
-          </script>
-        </li>
-        <li>
-          <a
-            onclick="document.getElementById('id02').style.display='block'"
-            class="buttonLogin"
-          >
-            Register
-          </a>
-
-          <div id="id02" class="modal">
-            <form
-              id="registerForm"
-              class="modal-content animate"
-              name="registration"
-              onSubmit="return formValidation();"
-            >
-              <div class="imgcontainer">
-                <h2>Registration</h2>
-                <span
-                  onclick="document.getElementById('id02').style.display='none'"
-                  class="close"
-                  title="Close Modal"
-                  >&times;</span
-                >
-              </div>
-
-              <div class="container">
-                <label><b>Email</b></label>
-                <input
-                  type="email"
-                  placeholder="Enter Email"
-                  name="email"
-                  id="emailReg"
-                  required
-                />
-
-                <label><b>Password</b></label>
-                <input
-                  type="password"
-                  placeholder="Enter Password"
-                  name="password"
-                  id="passwordReg"
-                  required
-                />
-
-                <label><b> Repeat Password</b></label>
-                <input
-                  type="password"
-                  placeholder="Repeat Password"
-                  name="passwordRepeat"
-                  required
-                />
-                <button id="signUp" class="buttonLogin" type="submit" name="signup">
-                  Sign Up
-                </button>
-              </div>
-
-              <div class="container" style="background-color:#f1f1f1">
-                <button
-                  type="button"
-                  onclick="document.getElementById('id02').style.display='none'"
-                  class="cancelbtn"
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <script>
-            // Get the modal
-            var modal = document.getElementById("id02");
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            };
-          </script>
-        </li>
-      </ul>
-    </div>
-    <div id="SignOut" class="rightNav" style="display: none;">
-      <ul>
-        <li>
-          <a href="#" onclick="handleSignOut()">
-            Sign Out
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-<!-- topNav -->
-
-<div id="banner">
-  <div class="bannerText">
-    <h1>DROID</h1>
-    <h2>Property Management Made Simple</h2>
-    <p>
-      The streamlined process to AFFORDABLE, easily ACCESSIBLE and
-      TIME-EFFICIENT property management
-    </p>
-  </div>
-</div>
-<!-- banner -->
-
-<div class="content">
-  <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
-    <!-- Container for the demo -->
-    <div
-      class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop"
-    >
-      <div
-        class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white"
-      >
-        <h2 class="mdl-card__title-text">
-          Firebase Email &amp; Password Authentication
-        </h2>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/CSS/mainStyle.css" />
+  </head>
+  <body>
+    <div class="topNav">
+      <div class="menuToggle">
+        <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
-      <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <div class="logo">DROID</div>
+      <nav>
+        <div class="leftNav">
+          <ul>
+            <li>
+              <a href="index.html">
+                <!-- <i class="fa fa-home fa-fw"></i>-->
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" class="active">
+                <!--<i class="fa fa-users fa-fw"></i>-->
+                About
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <!--<i class="fa fa-phone fa-fw"></i>-->
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <!--<i class="fa fa-columns fa-fw"></i>-->
+                Dashboard
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="LogReg" class="rightNav">
+          <ul>
+            <li>
+              <a
+                onclick="document.getElementById('id01').style.display='block'"
+                class="buttonLogin"
+                >Login</a
+              >
+
+              <div id="id01" class="modal">
+                <form id="loginForm" class="modal-content animate">
+                  <div class="imgcontainer">
+                    <h2>Login</h2>
+                    <span
+                      onclick="document.getElementById('id01').style.display='none'"
+                      class="close"
+                      title="Close Modal"
+                      >&times;</span
+                    >
+                  </div>
+
+                  <div class="container">
+                    <label><b>Email</b></label>
+                    <input
+                      type="email"
+                      placeholder="Enter email"
+                      name="email"
+                      id="emailLog"
+                      required
+                    />
+
+                    <label><b>Password</b></label>
+                    <input
+                      type="password"
+                      placeholder="Enter Password"
+                      name="password"
+                      id="passwordLog"
+                      required
+                    />
+
+                    <button
+                      class="buttonLogin"
+                      type="submit"
+                      id="signIn"
+                      name="signin"
+                    >
+                      Sign In
+                    </button>
+                  </div>
+
+                  <div class="containerReset" style="background-color:#f1f1f1">
+                    <button
+                      id="cancelButton"
+                      type="button"
+                      onclick="document.getElementById('id01').style.display='none'"
+                      class="cancelbtn"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="button"
+                      id="passwordReset"
+                      name="verifyEmail"
+                      class="cancelbtn"
+                    >
+                      Send Password Reset Email
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <script>
+                // Get the modal
+                var modal = document.getElementById("id01");
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                };
+              </script>
+            </li>
+            <li>
+              <a
+                onclick="document.getElementById('id02').style.display='block'"
+                class="buttonLogin"
+              >
+                Register
+              </a>
+
+              <div id="id02" class="modal">
+                <form
+                  id="registerForm"
+                  class="modal-content animate"
+                  name="registration"
+                  onSubmit="return formValidation();"
+                >
+                  <div class="imgcontainer">
+                    <h2>Registration</h2>
+                    <span
+                      onclick="document.getElementById('id02').style.display='none'"
+                      class="close"
+                      title="Close Modal"
+                      >&times;</span
+                    >
+                  </div>
+
+                  <div class="container">
+                    <label><b>Email</b></label>
+                    <input
+                      type="email"
+                      placeholder="Enter Email"
+                      name="email"
+                      id="emailReg"
+                      required
+                    />
+
+                    <label><b>Password</b></label>
+                    <input
+                      type="password"
+                      placeholder="Enter Password"
+                      name="password"
+                      id="passwordReg"
+                      required
+                    />
+
+                    <label><b> Repeat Password</b></label>
+                    <input
+                      type="password"
+                      placeholder="Repeat Password"
+                      name="passwordRepeat"
+                      required
+                    />
+                    <button
+                      id="signUp"
+                      class="buttonLogin"
+                      type="submit"
+                      name="signup"
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button
+                      type="button"
+                      onclick="document.getElementById('id02').style.display='none'"
+                      class="cancelbtn"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <script>
+                // Get the modal
+                var modal = document.getElementById("id02");
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                };
+              </script>
+            </li>
+          </ul>
+        </div>
+        <div id="SignOut" class="rightNav" style="display: none;">
+          <ul>
+            <li>
+              <a href="#" onclick="handleSignOut()">
+                Sign Out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- topNav -->
+
+
+    <div id="banner">
+      <div class="bannerText">
+        <h1>DROID</h1>
+        <h2>Property Management Made Simple</h2>
         <p>
-          Enter an email and password below and either sign in to an
-          existing account or sign up
+          The streamlined process to AFFORDABLE, easily ACCESSIBLE and
+          TIME-EFFICIENT property management
         </p>
+      </div>
+    </div>
+    <!-- banner -->
 
 
-        <!-- Container where we'll display the user details -->
-        <div class="user-details-container">
-          Firebase sign-in status:
-          <span id="signInStatus">Unknown</span>
-          <div>Firebase auth <code>currentUser</code> object value:</div>
-          <pre><code id="accountDetails">null</code></pre>
+    <div id="content" class="content">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+        <!-- Container for the demo -->
+        <div>
+          <div>
+            <h2>
+              Firebase Email &amp; Password Authentication
+            </h2>
+          </div>
+          <div>
+            <p>
+              Enter an email and password below and either sign in to an
+              existing account or sign up
+            </p>
+
+            <!-- Container where we'll display the user details -->
+            <div>
+              Firebase sign-in status:
+              <span id="signInStatus">Unknown</span>
+              <div>Firebase auth <code>currentUser</code> object value:</div>
+              <pre><code id="accountDetails">null</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!-- content -->
+    <!-- content -->
 
-<script src="assets/SCRIPT/script.js"></script>
-<script src="assets/SCRIPT/firebase.js"></script>
 
-<!-- script-->
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script>
-  $(document).ready(toggleNav);
-</script>
+    <div id="footer" class="footer">
+      <div class="footerLeft">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footerRight">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-github"></a>
+      </div>
+      <div class="madeBy">
+        Made with <span class="fa fa-heart"></span> by
+        <a
+          class="githubLink"
+          href="https://github.com/JustGinger888"
+          target="blank"
+          >Ethan Moffatt</a
+        >
+      </div>
+    </div>
+    <!-- Footer -->
 
-<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
-<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+    
+    <!-- script-->
+    <script src="assets/SCRIPT/script.js"></script>
+    <script src="assets/SCRIPT/firebase.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(toggleNav);
+    </script>
 
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
-<script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyDdi476d9Zkv-tGmbgwLg5Q0Fc-d2Oc2jQ",
-    authDomain: "webtechassessment2.firebaseapp.com",
-    databaseURL: "https://webtechassessment2.firebaseio.com",
-    projectId: "webtechassessment2",
-    storageBucket: "webtechassessment2.appspot.com",
-    messagingSenderId: "552477184206",
-    appId: "1:552477184206:web:0620b54b1dd74e6573c09f",
-    measurementId: "G-Q4YNRWMH0M"
-  };
-  firebase.initializeApp(firebaseConfig);
-</script>
-<!-- script -->
-</body>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDdi476d9Zkv-tGmbgwLg5Q0Fc-d2Oc2jQ",
+        authDomain: "webtechassessment2.firebaseapp.com",
+        databaseURL: "https://webtechassessment2.firebaseio.com",
+        projectId: "webtechassessment2",
+        storageBucket: "webtechassessment2.appspot.com",
+        messagingSenderId: "552477184206",
+        appId: "1:552477184206:web:0620b54b1dd74e6573c09f",
+        measurementId: "G-Q4YNRWMH0M"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- script -->
+  </body>
 </html>
