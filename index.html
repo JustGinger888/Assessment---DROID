@@ -46,7 +46,7 @@
             </li>
           </ul>
         </div>
-        <div class="rightNav">
+        <div id="LogReg" class="rightNav">
           <ul>
             <li>
               <a
@@ -88,7 +88,7 @@
 
                     <button 
                       type="submit"
-                      id="sign-in" 
+                      id="signIn" 
                       name="signin"
                     >
                       Sign In
@@ -123,8 +123,9 @@
               <a
                 onclick="document.getElementById('id02').style.display='block'"
                 class="buttonLogin"
-                >Register</a
               >
+              Register
+              </a>
 
               <div id="id02" class="modal">
                 <form
@@ -170,7 +171,7 @@
                       required
                     />
                     <button
-                      id="sign-up"
+                      id="signUp"
                       type="submit"
                       name="signup"
                     >
@@ -201,6 +202,15 @@
                   }
                 };
               </script>
+            </li>
+          </ul>
+        </div>
+        <div id="SignOut" class="rightNav" style="display: none;">
+          <ul>
+            <li>
+              <a href="#" onclick="handleSignOut()">
+                Sign Out
+              </a>
             </li>
           </ul>
         </div>
@@ -262,16 +272,16 @@
             <button
               class="mdl-button mdl-js-button mdl-button--raised"
               disabled
-              id="verify-email"
-              name="verify-email"
+              id="verifyEmail"
+              name="verifyEmail"
             >
               Send Email Verification
             </button>
             &nbsp;&nbsp;&nbsp;
             <button
               class="mdl-button mdl-js-button mdl-button--raised"
-              id="password-reset"
-              name="verify-email"
+              id="passwordReset"
+              name="verifyEmail"
             >
               Send Password Reset Email
             </button>
@@ -279,9 +289,9 @@
             <!-- Container where we'll display the user details -->
             <div class="user-details-container">
               Firebase sign-in status:
-              <span id="sign-in-status">Unknown</span>
+              <span id="signInStatus">Unknown</span>
               <div>Firebase auth <code>currentUser</code> object value:</div>
-              <pre><code id="account-details">null</code></pre>
+              <pre><code id="accountDetails">null</code></pre>
             </div>
           </div>
         </div>

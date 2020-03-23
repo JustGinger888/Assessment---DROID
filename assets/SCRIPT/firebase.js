@@ -18,6 +18,7 @@ function submitLogin(e) {
 }
 
 function toggleSignIn(email, password) {
+  var success = false;
   if (firebase.auth().currentUser) {
     // [START signout]
     firebase.auth().signOut();
@@ -33,7 +34,11 @@ function toggleSignIn(email, password) {
     }
     // Sign in with email and pass.
     // [START authwithemail]
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function(user) {
+      document.getElementById("LogReg").style.display = "none";
+      document.getElementById("SignOut").style.display = "block";
+      document.getElementById('id01').style.display='none';
+      }).catch(function (error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -44,12 +49,25 @@ function toggleSignIn(email, password) {
         alert(errorMessage);
       }
       console.log(error);
-      document.getElementById('sign-in').disabled = false;
+      console.log(success);
+      // document.getElementById('signIn').disabled = false;
       // [END_EXCLUDE]
     });
     // [END authwithemail]
   }
-  //document.getElementById('sign-in').disabled = true;
+  //document.getElementById('signIn').disabled = true;
+}
+
+
+//----------------------------------------------------- signOut
+function handleSignOut(e) {
+  firebase.auth().signOut().then(function() {
+    console.log('Signed Out');
+  }, function(error) {
+    console.error('Sign Out Error', error);
+  });
+  document.getElementById("LogReg").style.display = "block";
+  document.getElementById("SignOut").style.display = "none";
 }
 
 
@@ -79,7 +97,11 @@ function handleSignUp(email, password) {
   }
   // Create user with email and pass.
   // [START createwithemail]
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
+    document.getElementById("LogReg").style.display = "none";
+    document.getElementById("SignOut").style.display = "block";
+    document.getElementById('id02').style.display='none';
+    }).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -128,7 +150,7 @@ function initApp() {
   // [START authstatelistener]
   firebase.auth().onAuthStateChanged(function (user) {
     // [START_EXCLUDE silent]
-    document.getElementById('verify-email').disabled = true;
+    document.getElementById('verifyEmail').disabled = true;
     // [END_EXCLUDE]
     if (user) {
       // User is signed in.
@@ -140,31 +162,33 @@ function initApp() {
       var uid = user.uid;
       var providerData = user.providerData;
       // [START_EXCLUDE]
-      document.getElementById('sign-in-status').textContent = 'Signed in';
-      document.getElementById('sign-in').textContent = 'Sign out';
-      document.getElementById('account-details').textContent = JSON.stringify(user, null, '  ');
+      document.getElementById('signInStatus').textContent = 'Signed in';
+      document.getElementById('signIn').textContent = 'Sign out';
+      document.getElementById('accountDetails').textContent = JSON.stringify(user, null, '  ');
       if (!emailVerified) {
-        document.getElementById('verify-email').disabled = false;
+        document.getElementById('verifyEmail').disabled = false;
       }
       // [END_EXCLUDE]
     } else {
       // User is signed out.
       // [START_EXCLUDE]
-      document.getElementById('sign-in-status').textContent = 'Signed out';
-      document.getElementById('sign-in').textContent = 'Sign in';
-      document.getElementById('account-details').textContent = 'null';
+      document.getElementById('signInStatus').textContent = 'Signed out';
+      document.getElementById('signIn').textContent = 'Sign in';
+      document.getElementById("LogReg").style.display = "block";
+      document.getElementById('accountDetails').textContent = 'null';
       // [END_EXCLUDE]
     }
     // [START_EXCLUDE silent]
-    document.getElementById('sign-in').disabled = false;
+    document.getElementById('signIn').disabled = false;
     // [END_EXCLUDE]
   });
   // [END authstatelistener]
 
-  document.getElementById('sign-in').addEventListener('click', toggleSignIn, false);
-  document.getElementById('sign-up').addEventListener('click', handleSignUp, false);
-  document.getElementById('verify-email').addEventListener('click', sendEmailVerification, false);
-  document.getElementById('password-reset').addEventListener('click', sendPasswordReset, false);
+  document.getElementById('signIn').addEventListener('click', toggleSignIn, false);
+  document.getElementById('signUp').addEventListener('click', handleSignUp, false);
+  document.getElementById('signUp').addEventListener('click', handleSignOut, false);
+  //document.getElementById('verifyEmail').addEventListener('click', sendEmailVerification, false);
+  document.getElementById('passwordReset').addEventListener('click', sendPasswordReset, false);
 }
 
 window.onload = function () {
