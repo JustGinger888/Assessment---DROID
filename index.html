@@ -100,7 +100,7 @@
                     >
                       Cancel
                     </button>
-                    <button id="passwordReset" name="verifyEmail" class="cancelbtn">
+                    <button type="button" id="passwordReset" name="verifyEmail" class="cancelbtn">
                       Send Password Reset Email
                     </button>
                   </div>
@@ -226,20 +226,16 @@
     </div>
     <!-- banner -->
 
-    <div class="content">
+    <div id="content" class="content">
       <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
         <!-- Container for the demo -->
-        <div
-          class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop"
-        >
-          <div
-            class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white"
-          >
-            <h2 class="mdl-card__title-text">
+        <div>
+          <div>
+            <h2>
               Firebase Email &amp; Password Authentication
             </h2>
           </div>
-          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+          <div>
             <p>
               Enter an email and password below and either sign in to an
               existing account or sign up
@@ -247,7 +243,7 @@
 
 
             <!-- Container where we'll display the user details -->
-            <div class="user-details-container">
+            <div>
               Firebase sign-in status:
               <span id="signInStatus">Unknown</span>
               <div>Firebase auth <code>currentUser</code> object value:</div>
@@ -258,6 +254,24 @@
       </div>
     </div>
     <!-- content -->
+
+
+    <div id="footer" class="footer">
+      <div class="footerLeft">
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footerRight">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-github"></a>
+      </div>
+    </div>
 
     <script src="assets/SCRIPT/script.js"></script>
     <script src="assets/SCRIPT/firebase.js"></script>
