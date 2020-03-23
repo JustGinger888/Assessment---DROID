@@ -120,7 +120,7 @@ function handleSignUp(email, password) {
 
 //----------------------------------------------------- Password Reset
 function sendPasswordReset() {
-  var email = document.getElementById('email').value;
+  var email = document.getElementById('emailLog').value;
   // [START sendpasswordemail]
   firebase.auth().sendPasswordResetEmail(email).then(function () {
     // Password Reset Email Sent!
@@ -168,6 +168,8 @@ function initApp() {
       if (!emailVerified) {
         document.getElementById('verifyEmail').disabled = false;
       }
+      document.getElementById("LogReg").style.display = "none";
+      document.getElementById("SignOut").style.display = "block";
       // [END_EXCLUDE]
     } else {
       // User is signed out.
@@ -176,6 +178,8 @@ function initApp() {
       document.getElementById('signIn').textContent = 'Sign in';
       document.getElementById("LogReg").style.display = "block";
       document.getElementById('accountDetails').textContent = 'null';
+      document.getElementById("LogReg").style.display = "block";
+      document.getElementById("SignOut").style.display = "none";
       // [END_EXCLUDE]
     }
     // [START_EXCLUDE silent]

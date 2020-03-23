@@ -86,22 +86,22 @@
                       required
                     />
 
-                    <button 
-                      type="submit"
-                      id="signIn" 
-                      name="signin"
-                    >
+                    <button type="submit" id="signIn" name="signin">
                       Sign In
                     </button>
                   </div>
 
-                  <div class="container" style="background-color:#f1f1f1">
+                  <div class="containerReset" style="background-color:#f1f1f1">
                     <button
+                      id="cancelButton"
                       type="button"
                       onclick="document.getElementById('id01').style.display='none'"
                       class="cancelbtn"
                     >
                       Cancel
+                    </button>
+                    <button id="passwordReset" name="verifyEmail" class="cancelbtn">
+                      Send Password Reset Email
                     </button>
                   </div>
                 </form>
@@ -124,7 +124,7 @@
                 onclick="document.getElementById('id02').style.display='block'"
                 class="buttonLogin"
               >
-              Register
+                Register
               </a>
 
               <div id="id02" class="modal">
@@ -170,11 +170,7 @@
                       name="passwordRepeat"
                       required
                     />
-                    <button
-                      id="signUp"
-                      type="submit"
-                      name="signup"
-                    >
+                    <button id="signUp" type="submit" name="signup">
                       Sign Up
                     </button>
                   </div>
@@ -248,27 +244,6 @@
               Enter an email and password below and either sign in to an
               existing account or sign up
             </p>
-
-            <input
-              class="mdl-textfield__input"
-              style="display:inline;width:auto;"
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Email"
-            />
-            &nbsp;&nbsp;&nbsp;
-            <input
-              class="mdl-textfield__input"
-              style="display:inline;width:auto;"
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-            />
-            <br /><br />
-
-            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
             <button
               class="mdl-button mdl-js-button mdl-button--raised"
               disabled
@@ -278,13 +253,6 @@
               Send Email Verification
             </button>
             &nbsp;&nbsp;&nbsp;
-            <button
-              class="mdl-button mdl-js-button mdl-button--raised"
-              id="passwordReset"
-              name="verifyEmail"
-            >
-              Send Password Reset Email
-            </button>
 
             <!-- Container where we'll display the user details -->
             <div class="user-details-container">
