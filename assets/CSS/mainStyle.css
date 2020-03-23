@@ -1,9 +1,11 @@
 :root {
-    --green:#20BF55;
-    --darkBlue:#0B4F6C;
-    --lightBlue:#01BAEF;
-    --white:#FBFBFF;
-    --gray:#757575;
+    --primary:#FF1053;
+    --secondary:#30BCED;
+    --tertiary:#279AF1;
+    --white:#f7f7ff;
+    --black:#011627;
+    --danger:#ff0000;
+    --success: #2FBF71;
 }
 
 body {
@@ -22,13 +24,13 @@ body {
   top: 0;
   left: 0;
   padding: 0 100px;
-  background: var(--green);
+  background: var(--black);
   width: 100%;
   box-sizing: border-box;
 }
 
 .logo {
-  color: var(--white);
+  color: var(--primary);
   height: 50px;
   line-height: 50px;
   font-size: 24px;
@@ -68,7 +70,7 @@ body {
 .topNav nav ul li a:hover,
 .topNav nav ul li a.active {
   color: var(--white);
-  background-color: var(--lightBlue);
+  background-color: var(--primary);
 }
 
 .menuToggle {
@@ -81,9 +83,9 @@ body {
 }
 
 .button {
-  background-color: var(--green); /* Green */
+  background-color: var(--black);
   border: none;
-  color: var(--green);
+  color: var(--primary);
   padding: 10px 32px;
   text-align: center;
   text-decoration: none;
@@ -95,12 +97,13 @@ body {
 }
 
 .buttonLogin {
-  background-color: var(--green); 
+  background-color: var(--black); 
   color: var(--white); 
+  transition: 0.5s;
 }
 
 .buttonLogin:hover {
-  background-color: var(--lightBlue);
+  background-color: var(--secondary);
   color: white;
 }
 /* Navigation */
@@ -117,7 +120,7 @@ input[type=text], input[type=password], input[type=passwordRepeat], input[type=e
 
 /* Set a style for all buttons */
 button {
-  background-color: var(--green);
+  background-color: var(--primary);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -129,8 +132,14 @@ button {
 /* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+  background-color: var(--primary);
+  display: block;
+  transition: 1s;
+}
+
+.cancelbtn:hover {
+  width: auto;
+  background-color: var(--danger);;
   display: block;
 }
 
@@ -281,9 +290,9 @@ a {
 
 /* Banner */
 #banner {
-  background-color: var(--darkBlue);
+  background-color: var(--secondary);
   width: 100vw;
-  height: 80vh;
+  height: 60vh;
 }
 
 
@@ -307,11 +316,11 @@ a {
     position: absolute;
     width: 100%;
     height: calc(100vh - 50px);
-    background: var(--green);
+    background: var(--primary);
     top: 50px;
     left: -100%;
     transition: 0.5s;
-    background-color: var(--gray);
+    background-color: var(--black);
   }
   .topNav nav.active{
     left: -50%;
@@ -324,7 +333,7 @@ a {
     text-align: left;
   }
   .topNav nav ul li a {
-    border-bottom: 1px solid var(--darkBlue);
+    border-bottom: 1px solid var(--secondary);
   }
   .leftNav {
     float:none;

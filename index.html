@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page | DROID Property Management</title>
+    <title>Droid Home | Property Management</title>
 
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -16,7 +16,7 @@
       <div class="menuToggle">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
-      <div class="logo">LOGO</div>
+      <div class="logo">DROID</div>
       <nav>
         <div class="leftNav">
           <ul>
@@ -27,13 +27,13 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="about.html">
                 <!--<i class="fa fa-users fa-fw"></i>-->
                 About
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="contact.html">
                 <!--<i class="fa fa-phone fa-fw"></i>-->
                 Contact
               </a>
@@ -86,7 +86,7 @@
                       required
                     />
 
-                    <button type="submit" id="signIn" name="signin">
+                    <button class="buttonLogin" type="submit" id="signIn" name="signin">
                       Sign In
                     </button>
                   </div>
@@ -163,14 +163,14 @@
                       required
                     />
 
-                    <label for="passwordRepeat"><b> Repeat Password</b></label>
+                    <label><b> Repeat Password</b></label>
                     <input
                       type="password"
                       placeholder="Repeat Password"
                       name="passwordRepeat"
                       required
                     />
-                    <button id="signUp" type="submit" name="signup">
+                    <button id="signUp" class="buttonLogin" type="submit" name="signup">
                       Sign Up
                     </button>
                   </div>
@@ -244,15 +244,7 @@
               Enter an email and password below and either sign in to an
               existing account or sign up
             </p>
-            <button
-              class="mdl-button mdl-js-button mdl-button--raised"
-              disabled
-              id="verifyEmail"
-              name="verifyEmail"
-            >
-              Send Email Verification
-            </button>
-            &nbsp;&nbsp;&nbsp;
+
 
             <!-- Container where we'll display the user details -->
             <div class="user-details-container">

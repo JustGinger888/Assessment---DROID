@@ -38,6 +38,7 @@ function toggleSignIn(email, password) {
       document.getElementById("LogReg").style.display = "none";
       document.getElementById("SignOut").style.display = "block";
       document.getElementById('id01').style.display='none';
+      document.getElementById("loginForm").reset()
       }).catch(function (error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -150,7 +151,7 @@ function initApp() {
   // [START authstatelistener]
   firebase.auth().onAuthStateChanged(function (user) {
     // [START_EXCLUDE silent]
-    document.getElementById('verifyEmail').disabled = true;
+    //document.getElementById('verifyEmail').disabled = true;
     // [END_EXCLUDE]
     if (user) {
       // User is signed in.
@@ -165,9 +166,9 @@ function initApp() {
       document.getElementById('signInStatus').textContent = 'Signed in';
       document.getElementById('signIn').textContent = 'Sign out';
       document.getElementById('accountDetails').textContent = JSON.stringify(user, null, '  ');
-      if (!emailVerified) {
-        document.getElementById('verifyEmail').disabled = false;
-      }
+      //if (!emailVerified) {
+        //document.getElementById('verifyEmail').disabled = false;
+      //}
       document.getElementById("LogReg").style.display = "none";
       document.getElementById("SignOut").style.display = "block";
       // [END_EXCLUDE]
