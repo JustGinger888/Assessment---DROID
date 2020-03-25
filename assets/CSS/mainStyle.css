@@ -1,5 +1,6 @@
 :root {
   --primary: #ff1053;
+  --primaryShade: #e40f4c;
   --secondary: #30bced;
   --tertiary: #279af1;
   --white: #f7f7ff;
@@ -447,15 +448,15 @@ a {
   margin: -50px 2px;
   border-radius: 50%;
   transition: 0.5s;
-  background: var(--secondary);
+  background: var(--primary);
   color: white;
 }
 .fa-instagram:hover,
 .fa-linkedin:hover,
 .fa-facebook:hover,
 .fa-github:hover {
-  background-color: var(--tertiary);
-  color: var(--primary);
+  background-color: var(--primaryShade);
+  color: var(--white);
 }
 
 .githubLink {
