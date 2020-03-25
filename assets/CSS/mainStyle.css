@@ -479,6 +479,7 @@ a {
 /* Footer */
 
 /* Breakpoints */
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .logo {
@@ -562,6 +563,10 @@ a {
   #passwordReset {
     float: none;
     width: 100%;
+  }
+
+  .bannerText {
+    padding: 4%;
   }
 }
 
