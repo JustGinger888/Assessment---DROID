@@ -9,6 +9,8 @@
   --success: #2fbf71;
 }
 
+
+
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +21,7 @@ body {
 #content {
   margin: -2% 5% 2% 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  transition: 0.4s;
   width: 86%;
   padding: 2%;
   background-color: var(--white);
@@ -39,6 +41,31 @@ body {
 .legal h2 {
   color: var(--secondary);
 }
+
+/* Columns & rows */
+.column3 {
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.column2 {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  box-sizing: border-box;
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Columns & rows */
+
 
 /* Navigation */
 .topNav {
@@ -336,7 +363,9 @@ a {
 #banner {
   background-color: var(--secondary);
   height: 88vh;
-  background-image: url(https://cdn.pixabay.com/photo/2015/07/02/10/47/facade-828984_1280.jpg);
+  background-attachment: fixed;
+  background-attachment: fixed;
+  background-image: url(https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -401,6 +430,18 @@ a {
   font-size: 44px;
 }
 /* Banner */
+
+/*  */
+.imageIndexTop {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+
+}
+
+.imageIndexTop:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
 /* Footer */
 .footer {
@@ -569,6 +610,47 @@ a {
   .bannerText {
     padding: 4%;
   }
+
+  #banner {
+    background-color: var(--secondary);
+    height: 66vh;
+    background-image: url(https://cdn.pixabay.com/photo/2015/07/02/10/47/facade-828984_1280.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #bannerAbout {
+    background-color: var(--secondary);
+    height: 66vh;
+    background-image: url(https://images.pexels.com/photos/298842/pexels-photo-298842.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #bannerContact {
+    background-color: var(--secondary);
+    height: 66vh;
+    background-image: url(https://images.pexels.com/photos/6332/coffee-cup-books-home.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .column3 {
+    float: left;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .column2 {
+    float: left;
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -615,6 +697,17 @@ a {
   #passwordReset {
     float: right;
   }
+  .column3 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  .column2 {
+    float: left;
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -652,6 +745,19 @@ a {
     padding-top: 0px;
     float: none;
   }
+
+  .column3 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+  }
+  
+  .column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
