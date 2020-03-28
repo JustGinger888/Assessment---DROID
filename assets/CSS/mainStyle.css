@@ -9,13 +9,11 @@
   --success: #2fbf71;
 }
 
-
-
 body {
   margin: 0;
   padding: 0;
   background-color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 #content {
@@ -42,6 +40,7 @@ body {
   color: var(--secondary);
 }
 
+
 /* Columns & rows */
 .column3 {
   box-sizing: border-box;
@@ -49,15 +48,12 @@ body {
   width: 33.33%;
   padding: 10px;
 }
-
 .column2 {
   box-sizing: border-box;
   float: left;
   width: 50%;
   padding: 10px;
 }
-
-/* Clear floats after the columns */
 .row:after {
   box-sizing: border-box;
   content: "";
@@ -78,12 +74,11 @@ body {
   box-sizing: border-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.5s;
+  z-index: 11;
 }
-
 .topNav:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 .logo {
   color: var(--primary);
   height: 50px;
@@ -93,25 +88,20 @@ body {
   font-weight: bold;
   padding-right: 20px;
 }
-
 .leftNav {
   float: left;
 }
-
 .rightNav {
   float: right;
 }
-
 .topNav nav ul {
   margin: 0;
   padding: 0;
   display: flex;
 }
-
 .topNav nav ul li {
   list-style: none;
 }
-
 .topNav nav ul li a {
   height: 50px;
   line-height: 50px;
@@ -121,13 +111,11 @@ body {
   display: block;
   transition-duration: 0.5s;
 }
-
 .topNav nav ul li a:hover,
 .topNav nav ul li a.active {
   color: var(--white);
   background-color: var(--primary);
 }
-
 .menuToggle {
   color: var(--white);
   float: left;
@@ -136,7 +124,6 @@ body {
   cursor: pointer;
   display: none;
 }
-
 .button {
   background-color: var(--black);
   border: none;
@@ -150,18 +137,17 @@ body {
   transition-duration: 0.5s;
   cursor: pointer;
 }
-
 .buttonLogin {
   background-color: var(--black);
   color: var(--white);
   transition: 0.5s;
 }
-
 .buttonLogin:hover {
   background-color: var(--secondary);
   color: white;
 }
 /* Navigation */
+
 
 /* Login/SignUp */
 input[type="text"],
@@ -175,8 +161,30 @@ input[type="email"] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+.containerReset {
+  padding: 16px;
+  display: block;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+.container {
+  padding: 16px;
+}
+span.pswForgot {
+  float: right;
+  padding-top: 16px;
+}
+/* Login/SignUp */
 
-/* Set a style for all buttons */
+
+/* Buttons */
 button {
   background-color: var(--primary);
   color: white;
@@ -186,80 +194,47 @@ button {
   cursor: pointer;
   width: 100%;
 }
-
-/* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
   background-color: var(--primary);
   display: block;
   transition: 1s;
 }
-
 .cancelbtn:hover {
   width: auto;
   background-color: var(--danger);
   display: block;
 }
-
-.containerReset {
-  padding: 16px;
-  display: block;
-}
-
 #cancelButton {
   display: inline;
 }
-
 #passwordReset {
   display: inline;
   float: right;
 }
+/* Buttons */
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.pswForgot {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
+/* The Modal*/
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
   padding-top: 60px;
 }
-
-/* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 5% auto 15% auto; 
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%; 
 }
-
-/* The Close Button (x) */
 .close {
   position: absolute;
   right: 25px;
@@ -268,19 +243,15 @@ span.pswForgot {
   font-size: 35px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: red;
   cursor: pointer;
 }
-
-/* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
 }
-
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0);
@@ -289,7 +260,6 @@ span.pswForgot {
     -webkit-transform: scale(1);
   }
 }
-
 @keyframes animatezoom {
   from {
     transform: scale(0);
@@ -298,13 +268,10 @@ span.pswForgot {
     transform: scale(1);
   }
 }
-
 .container {
   padding: 16px;
   background-color: white;
 }
-
-/* Full-width input fields */
 input[type="text"],
 input[type="password"],
 input[type="passwordRepeat"],
@@ -316,7 +283,6 @@ input[type="email"] {
   border: none;
   background: #f1f1f1;
 }
-
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="passwordRepeat"]:focus,
@@ -324,14 +290,10 @@ input[type="email"]:focus {
   background-color: #ddd;
   outline: none;
 }
-
-/* Overwrite default styles of hr */
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
-
-/* Set a style for the submit button */
 .registerbtn {
   background-color: #4caf50;
   color: white;
@@ -342,22 +304,18 @@ hr {
   width: 100%;
   opacity: 0.9;
 }
-
 .registerbtn:hover {
   opacity: 1;
 }
-
-/* Add a blue text color to links */
 a {
   color: dodgerblue;
 }
-
-/* Set a grey background color and center the text of the "sign in" section */
 .signin {
   background-color: #f1f1f1;
   text-align: center;
 }
-/* Login/SignUp */
+/* The Modal*/
+
 
 /* Banner */
 #banner {
@@ -371,7 +329,6 @@ a {
   background-size: cover;
   background-position: center;
 }
-
 #bannerAbout {
   background-color: var(--secondary);
   height: 88vh;
@@ -380,7 +337,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #bannerContact {
   background-color: var(--secondary);
   height: 88vh;
@@ -390,11 +346,9 @@ a {
   background-size: cover;
   background-position: center;
 }
-
 .bannerText {
   padding: 10%;
 }
-
 .bannerTextStyle {
   margin-top: 20vh;
   background-color: var(--black);
@@ -403,45 +357,178 @@ a {
   padding: 4% 6%;
   display: inline-block;
 }
-
 .bannerTextStyle h1 {
   color: var(--primary);
   line-height: 0px;
 }
-
 .bannerTextStyle h2 {
   color: var(--secondary);
   font-size: 28px;
 }
-
 .bannerTextStyle:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 .homeFormat {
   font-size: 68px;
 }
-
 .aboutFormat {
   font-size: 60px;
 }
-
 .contactFormat {
   font-size: 44px;
 }
 /* Banner */
 
-/*  */
+
+/* Top Column */
 .imageIndexTop {
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.4s;
 
 }
-
 .imageIndexTop:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+/* Top Column */
+
+
+/* Testimonials */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+.sliderContainer, *:before, *:after {
+  box-sizing: border-box;
+}
+.sliderContainer {
+  height: 340px;
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+  margin: 0 2%;
+}
+.sliderContainer:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.slider {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 6px solid var(--primary);
+  outline-offset: -6px;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+          animation: check 0.4s linear forwards;
+}
+.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+}
+.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+  left: -200%;
+}
+.slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+  left: -300%;
+}
+.slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+.slider__contents {
+  height: 74%;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider__image {
+  font-size: 2.7rem;
+      color: var(--primary);
+}
+.slider__caption {
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.slider__txt {
+  color: var(--black);
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+
+@keyframes check {
+  50% {
+    outline-color:var(--black);
+    box-shadow: 0 0 0 12px var(--black), 0 0 0 18px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color:var(--black);
+    box-shadow: 0 0 0 0 var(--black), 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+/* Testimonials */
+
 
 /* Footer */
 .footer {
@@ -757,7 +844,9 @@ a {
     width: 50%;
     padding: 10px;
   }
-}
+  .sliderContainer {
+    margin: 0%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -766,6 +855,9 @@ a {
   .topNav {
     padding: 0 60px;
     position: fixed;
+  }
+  .sliderContainer {
+    margin: 0 20%;
   }
 }
 

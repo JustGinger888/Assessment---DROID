@@ -16,12 +16,12 @@ function formValidation() {
     if (usernameValidation(username, 5, 32)) {
         if (validateEmail(uemail)) {
             if (passwordValidation(password, 8, 64)) {
-                    if (passwordRepeatValidation(password,passwordRepeat)) {
-                        return true;
-                    }
+                if (passwordRepeatValidation(password, passwordRepeat)) {
+                    return true;
                 }
             }
         }
+    }
     return false;
 }
 
@@ -72,13 +72,17 @@ function passwordRepeatValidation(password, passwordRepeat) {
 var modal = document.getElementById('id01');
 var modal2 = document.getElementById('id02');
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-  else if (event.target == modal2) {
-    modal2.style.display = "none";
-  }
-}
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    else if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+};
 
 //Modal Close
+
+//Testimonial
+
+//Testimonial
