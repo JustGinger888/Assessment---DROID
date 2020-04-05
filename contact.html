@@ -6,7 +6,7 @@
     <title>Contact Droit | Propety Management</title>
 
     <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/CSS/mainStyle.css" />
@@ -216,30 +216,39 @@
     <!-- banner -->
 
     <div id="content" class="content">
-      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
-        <!-- Container for the demo -->
-        <div>
-          <div>
-            <h2>
-              Firebase Email &amp; Password Authentication
-            </h2>
-          </div>
-          <div>
-            <p>
-              Enter an email and password below and either sign in to an
-              existing account or sign up
-            </p>
-
-            <!-- Container where we'll display the user details -->
-            <div>
-              Firebase sign-in status:
-              <span id="signInStatus">Unknown</span>
-              <div>Firebase auth <code>currentUser</code> object value:</div>
-              <pre><code id="accountDetails">null</code></pre>
-            </div>
-          </div>
+      <form id="contactForm">
+        <div class="imgcontainer">
+          <h2>
+            Fill out the form below or alternatively give us a call or email:
+          </h2>
+          <p>Call: <a href="tel:07828414455">0782 841 4455</a></p>
+          <p>Mail: <a href="mailto:ethanmoffatt888@icloud.com">ethanmoffatt888@icloud.com</a>
+          </p>
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
         </div>
-      </div>
+
+        <div class="container">
+          <label><b>Email</b></label>
+          <input
+            type="email"
+            placeholder="Enter email"
+            name="email"
+            id="emailContact"
+            required
+          />
+
+          <label><b>Message</b></label>
+        </div>
+
+        <button id="contactUs" class="buttonLogin" type="submit" name="signup">
+          Contact Us
+        </button>
+      </form>
     </div>
     <!-- content -->
 
