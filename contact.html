@@ -217,23 +217,26 @@
 
     <div id="content" class="content">
       <form id="contactForm">
-        <div class="imgcontainer">
+        <div class="contactTop">
           <h2>
-            Fill out the form below or alternatively give us a call or email:
+            Fill out the form below or give us a call / email:
           </h2>
           <p>Call: <a href="tel:07828414455">0782 841 4455</a></p>
           <p>Mail: <a href="mailto:ethanmoffatt888@icloud.com">ethanmoffatt888@icloud.com</a>
           </p>
-          <span
-            onclick="document.getElementById('id01').style.display='none'"
-            class="close"
-            title="Close Modal"
-            >&times;</span
-          >
         </div>
 
-        <div class="container">
-          <label><b>Email</b></label>
+        <div class="userInfo">
+          <label><b>Full Name *</b></label>
+          <input
+            type="text"
+            placeholder="Enter full name"
+            name="fullName"
+            id="nameContact"
+            required
+          />
+
+          <label><b>Email *</b></label>
           <input
             type="email"
             placeholder="Enter email"
@@ -242,11 +245,21 @@
             required
           />
 
+          <label><b>Phone Number</b></label>
+          <input
+            type="text"
+            placeholder="Enter contact number"
+            name="number"
+            id="numberContact"
+          />
+
           <label><b>Message</b></label>
+          <br>
+          <textarea name="message" id="messageBox" rows="10"></textarea>
         </div>
 
         <button id="contactUs" class="buttonLogin" type="submit" name="signup">
-          Contact Us
+          Submit Form
         </button>
       </form>
     </div>

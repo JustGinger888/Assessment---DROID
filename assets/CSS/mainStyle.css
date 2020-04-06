@@ -225,7 +225,7 @@ button {
 }
 .cancelbtn:hover {
   width: auto;
-  background-color: var(--danger);
+  background-color: var(--primaryShade);
   display: block;
 }
 #cancelButton {
@@ -551,6 +551,51 @@ a {
 }
 /* Testimonials */
 
+/* Contact */
+.userInfo input[type=text], 
+.userInfo input[type=email],
+.userInfo textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--secondary);
+  box-sizing: border-box;
+  background-color: #fafaff;
+  transition: 0.4s;
+}
+.userInfo input[type=text]:focus, 
+.userInfo input[type=email]:focus, 
+.userInfo textarea:focus {
+  border: 1px solid var(--primary);
+}
+textarea {
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+textarea:focus{
+  outline: none;
+}
+.contactTop{
+  text-align: center;
+}
+.contactTop h2{
+  color: var(--secondary);
+  font-size: xx-large;
+}
+.contactTop p a{
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.4s;
+}
+.contactTop p a:hover{
+  text-decoration: underline;
+}
+.contactTop p{
+  font-size: large;
+}
+/* Contact */
 
 /* Footer */
 .footer {
