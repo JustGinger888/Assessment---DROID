@@ -37,6 +37,8 @@ function toggleSignIn(email, password) {
     firebase.auth().signInWithEmailAndPassword(email, password).then(function(user) {
       document.getElementById("LogReg").style.display = "none";
       document.getElementById("SignOut").style.display = "block";
+      document.getElementById("dashboard").style.display = "block";
+      document.getElementById("dashboardLink").style.color = "#f7f7ff";   
       document.getElementById('id01').style.display='none';
       document.getElementById("loginForm").reset()
       }).catch(function (error) {
@@ -69,6 +71,7 @@ function handleSignOut(e) {
   });
   document.getElementById("LogReg").style.display = "block";
   document.getElementById("SignOut").style.display = "none";
+  document.getElementById("dashboard").style.display = "none";
 }
 
 
@@ -101,6 +104,8 @@ function handleSignUp(email, password) {
   firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
     document.getElementById("LogReg").style.display = "none";
     document.getElementById("SignOut").style.display = "block";
+    document.getElementById("dashboard").style.display = "block";
+    document.getElementById("dashboardLink").style.color = "#f7f7ff";   
     document.getElementById('id02').style.display='none';
     }).catch(function (error) {
     // Handle Errors here.
@@ -163,24 +168,23 @@ function initApp() {
       var uid = user.uid;
       var providerData = user.providerData;
       // [START_EXCLUDE]
-      document.getElementById('signInStatus').textContent = 'Signed in';
       document.getElementById('signIn').textContent = 'Sign out';
-      document.getElementById('accountDetails').textContent = JSON.stringify(user, null, '  ');
       //if (!emailVerified) {
         //document.getElementById('verifyEmail').disabled = false;
       //}
       document.getElementById("LogReg").style.display = "none";
       document.getElementById("SignOut").style.display = "block";
+      document.getElementById("dashboard").style.display = "block"; 
+      document.getElementById("dashboardLink").style.color = "#f7f7ff";       
       // [END_EXCLUDE]
     } else {
       // User is signed out.
       // [START_EXCLUDE]
-      document.getElementById('signInStatus').textContent = 'Signed out';
       document.getElementById('signIn').textContent = 'Sign in';
       document.getElementById("LogReg").style.display = "block";
-      document.getElementById('accountDetails').textContent = 'null';
       document.getElementById("LogReg").style.display = "block";
       document.getElementById("SignOut").style.display = "none";
+      document.getElementById("dashboard").style.display = "none";   
       // [END_EXCLUDE]
     }
     // [START_EXCLUDE silent]

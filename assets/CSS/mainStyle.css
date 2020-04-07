@@ -204,6 +204,10 @@ span.pswForgot {
   float: right;
   padding-top: 16px;
 }
+
+#dashboard a {
+  color: var(--black);
+}
 /* Login/SignUp */
 
 
