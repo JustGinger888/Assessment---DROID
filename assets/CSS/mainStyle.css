@@ -668,6 +668,10 @@ textarea:focus{
   text-decoration: underline;
   color: var(--primary);
 }
+
+.social {
+  display:none;
+}
 /* Footer */
 
 /* Breakpoints */
