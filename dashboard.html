@@ -3,255 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="We make the management of your properties easy through an efficient, accessible and organised ticketing system, making both landlords and tenants lives simpler.">
+    <meta
+      name="description"
+      content="We make the management of your properties easy through an efficient, accessible and organised ticketing system, making both landlords and tenants lives simpler."
+    />
     <title>Droit Home | Property Management</title>
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/CSS/mainStyle.css" />
+    <link rel="stylesheet" href="assets/CSS/dashboardStyle.css" />
   </head>
   <body>
-    <div class="topNav">
-      <div class="menuToggle">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </div>
-      <div class="logo">DROIT</div>
-      <nav>
-        <div class="leftNav">
-          <ul>
-            <li>
-              <a href="#" class="active">
-                <!-- <i class="fa fa-home fa-fw"></i>-->
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="about.html">
-                <!--<i class="fa fa-users fa-fw"></i>-->
-                About
-              </a>
-            </li>
-            <li>
-              <a href="contact.html">
-                <!--<i class="fa fa-phone fa-fw"></i>-->
-                Contact
-              </a>
-            </li>
-            <li id="dashboard">
-              <a href="#" id="dashboardLink">
-                <!--<i class="fa fa-columns fa-fw"></i>-->
-                Dashboard
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="LogReg" class="rightNav">
-          <ul>
-            <li>
-              <a
-                onclick="document.getElementById('id01').style.display='block'"
-                class="buttonLogin"
-                >Login</a
-              >
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
-              <div id="id01" class="modal">
-                <form id="loginForm" class="modal-content animate">
-                  <div class="imgcontainer">
-                    <h2>Login</h2>
-                    <span
-                      onclick="document.getElementById('id01').style.display='none'"
-                      class="close"
-                      title="Close Modal"
-                      >&times;</span
-                    >
-                  </div>
-
-                  <div class="container">
-                    <label><b>Email</b></label>
-                    <input
-                      type="email"
-                      placeholder="Enter email"
-                      name="email"
-                      id="emailLog"
-                      required
-                    />
-
-                    <label><b>Password</b></label>
-                    <input
-                      type="password"
-                      placeholder="Enter Password"
-                      name="password"
-                      id="passwordLog"
-                      required
-                    />
-
-                    <button
-                      class="buttonLogin"
-                      type="submit"
-                      id="signIn"
-                      name="signin"
-                    >
-                      Sign In
-                    </button>
-                  </div>
-
-                  <div class="containerReset" style="background-color:#f1f1f1">
-                    <button
-                      id="cancelButton"
-                      type="button"
-                      onclick="document.getElementById('id01').style.display='none'"
-                      class="cancelbtn"
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      type="button"
-                      id="passwordReset"
-                      name="verifyEmail"
-                      class="cancelbtn"
-                    >
-                      Send Password Reset Email
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </li>
-            <li>
-              <a
-                onclick="document.getElementById('id02').style.display='block'"
-                class="buttonLogin"
-              >
-                Register
-              </a>
-
-              <div id="id02" class="modal">
-                <form
-                  id="registerForm"
-                  class="modal-content animate"
-                  name="registration"
-                  onSubmit="return formValidation();"
-                >
-                  <div class="imgcontainer">
-                    <h2>Registration</h2>
-                    <span
-                      onclick="document.getElementById('id02').style.display='none'"
-                      class="close"
-                      title="Close Modal"
-                      >&times;</span
-                    >
-                  </div>
-
-                  <div class="container">
-                    <label><b>Email</b></label>
-                    <input
-                      type="email"
-                      placeholder="Enter Email"
-                      name="email"
-                      id="emailReg"
-                      required
-                    />
-
-                    <label><b>Password</b></label>
-                    <input
-                      type="password"
-                      placeholder="Enter Password"
-                      name="password"
-                      id="passwordReg"
-                      required
-                    />
-
-                    <label><b> Repeat Password</b></label>
-                    <input
-                      type="password"
-                      placeholder="Repeat Password"
-                      name="passwordRepeat"
-                      required
-                    />
-                    <button
-                      id="signUp"
-                      class="buttonLogin"
-                      type="submit"
-                      name="signup"
-                    >
-                      Sign Up
-                    </button>
-                  </div>
-
-                  <div class="container" style="background-color:#f1f1f1">
-                    <button
-                      type="button"
-                      onclick="document.getElementById('id02').style.display='none'"
-                      class="cancelbtn"
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div id="SignOut" class="rightNav" style="display: none;">
-          <ul>
-            <li>
-              <a href="#" onclick="handleSignOut()">
-                Sign Out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<div class="wrapper">
+  
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
     </div>
-    <!-- topNav -->
-
-    <div id="banner">
-      <div class="bannerText">
-        <div class="bannerTextStyle">
-          <h1 class="homeFormat">DROIT</h1>
-          <h2>Property Management Made Simple</h2>
-        </div>
+    <div class="top_menu">
+      <div class="logo">
+         DROIT
       </div>
+      <ul>
+        <li><a href="#">
+          <i class="fas fa-search"></i>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-bell"></i>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-user"></i>
+          </a></li>
+      </ul>
     </div>
-    <!-- banner -->
-
-    <div id="content" class="content">
-    
-        <div></div>
-      
+  </div>
+  
+  <div class="sidebar">
+      <ul>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">Books</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-file-video"></i></span>
+          <span class="title">Movies</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+          <span class="title">Sports</span>
+          </a></li>
+        <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-blog"></i></span>
+          <span class="title">Blogs</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-leaf"></i></span>
+          <span class="title">Nature</span>
+          </a></li>
+    </ul>
+  </div>
+  
+  <div class="main_container">
+    <div class="item">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
     </div>
-    <!-- content -->
-
-    <div id="footer" class="footer">
-      <div class="footerLeft">
-        <a href="#">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="#">Dashboard</a>
-        <a href="Terms&Conditions.html">Terms & Conditions</a>
-        <a href="PrivacyPolicy.html">Privacy Policy</a>
-      </div>
-      <div class="footerRight">
-        <a href="https://www.facebook.com/Droit-Property-Management-105726147762729"><span class="fa fa-facebook"></span></a>
-        <a href="#"><span class="fa fa-instagram"></span></a>
-        <a href="https://www.linkedin.com/in/ethan-moffatt-605656182/"><span class="fa fa-linkedin"></span></a>
-        <a href="https://github.com/JustGinger888"><span class="fa fa-github"></span></a>
-      </div>
-      <div class="madeBy">
-        Made with <span class="fa fa-heart"></span> by
-        <a
-          class="githubLink"
-          href="https://github.com/JustGinger888"
-          target="blank"
-          >Ethan Moffatt</a
-        >
-      </div>
+    <div class="item">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
     </div>
-    <!-- Footer -->
+    <div class="item">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
+    </div>
+    <div class="item">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
+    </div>
+  </div>
+</div>
 
 
     <!-- script-->
-    <script src="assets/SCRIPT/script.js"></script>
+    <script src="assets/SCRIPT/dashboard.js"></script>
     <script src="assets/SCRIPT/firebase.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -278,7 +113,7 @@
         storageBucket: "webtechassessment2.appspot.com",
         messagingSenderId: "552477184206",
         appId: "1:552477184206:web:0620b54b1dd74e6573c09f",
-        measurementId: "G-Q4YNRWMH0M"
+        measurementId: "G-Q4YNRWMH0M",
       };
       firebase.initializeApp(firebaseConfig);
     </script>

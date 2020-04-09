@@ -9,6 +9,7 @@
   --success: #2fbf71;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -350,7 +351,6 @@ a {
   height: 88vh;
   background-attachment: fixed;
   background-attachment: fixed;
-  background-image: url(https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -359,7 +359,6 @@ a {
 #bannerAbout {
   background-color: var(--secondary);
   height: 88vh;
-  background-image: url(https://images.pexels.com/photos/298842/pexels-photo-298842.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -367,7 +366,6 @@ a {
 #bannerContact {
   background-color: var(--secondary);
   height: 88vh;
-  background-image: url(https://images.pexels.com/photos/6332/coffee-cup-books-home.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -768,7 +766,6 @@ textarea:focus{
   #banner {
     background-color: var(--secondary);
     height: 66vh;
-    background-image: url(https://cdn.pixabay.com/photo/2015/07/02/10/47/facade-828984_1280.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -778,7 +775,6 @@ textarea:focus{
   #bannerAbout {
     background-color: var(--secondary);
     height: 66vh;
-    background-image: url(https://images.pexels.com/photos/298842/pexels-photo-298842.jpeg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -787,7 +783,6 @@ textarea:focus{
   #bannerContact {
     background-color: var(--secondary);
     height: 66vh;
-    background-image: url(https://images.pexels.com/photos/6332/coffee-cup-books-home.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
