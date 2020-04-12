@@ -59,11 +59,10 @@ body {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.top_navbar .logo {
+.top_navbar .logo a {
   color: var(--primary);
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 3px;
 }
 
 .top_navbar .top_menu ul {
@@ -230,13 +229,23 @@ nav.active .sidebar {
 }
 
 nav.active ul li a {
-  padding-left: 60%;
+  padding-left: 38%;
 }
+
+.pageIndicator {
+    background-color: var(--primary);
+    height: 300px;
+}
+
+.sidebar{
+    box-shadow: 4px 0px rgba(0, 0, 0, 0.2);
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .main_container {
         width: (100%);
-        margin-top: 70px;
+        margin-top: -40px;
         margin-left: 0px;
         padding: 15px;
         transition: all 0.3s ease;
@@ -257,7 +266,7 @@ nav.active ul li a {
   }
   .main_container {
     width: (100%);
-    margin-top: 70px;
+    margin-top: -40px;
     margin-left: 0px;
     padding: 15px;
     transition: all 0.3s ease;
@@ -287,7 +296,7 @@ nav.active ul li a {
   }
   .main_container {
     width: (100% - 200px);
-    margin-top: 70px;
+    margin-top: -40px;
     margin-left: 200px;
     padding: 15px;
     transition: all 0.3s ease;
