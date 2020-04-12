@@ -1,3 +1,5 @@
-$(".hamburger").click(function(){
-   $(".wrapper").toggleClass("collapse");
-});
+toggleNav = () => {
+    $('.menuToggle').click(function () {
+        $('nav').toggleClass('active')
+    })
+}
