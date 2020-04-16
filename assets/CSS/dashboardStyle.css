@@ -26,7 +26,7 @@ h1 {
   padding-top: 66px;
   padding-right: 8px;
   text-align: right;
-  font-weight: 100;
+  font-weight: 50;
   color: var(--white);
 }
 
@@ -256,13 +256,20 @@ nav.active ul li a {
 }
 
 .sidebar {
-  box-shadow: 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 0px 4px 0px rgba(0,0,0,0.2);
 }
 
 .gridContainer {
   display: grid;
   justify-content: space-evenly;
   grid-template-columns: 32% 32% 32%;
+  grid-gap: 18px;
+}
+
+.gridContainer60 {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 60% 40%;
   grid-gap: 18px;
 }
 
@@ -284,6 +291,13 @@ nav.active ul li a {
     line-height: 22px;
   }
   .gridContainer {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 100%;
+    grid-gap: 18px;
+  }
+
+  .gridContainer60 {
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: 100%;
@@ -314,6 +328,12 @@ nav.active ul li a {
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: 49% 49%;
+    grid-gap: 18px;
+  }
+  .gridContainer60 {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 60% 40%;
     grid-gap: 18px;
   }
 }

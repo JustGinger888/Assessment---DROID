@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="We make the management of your properties easy through an efficient, accessible and organised ticketing system, making both landlords and tenants lives simpler."
+    />
+    <title>Profile Page</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/CSS/dashboardStyle.css" />
+  </head>
+
+  <body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <div class="top_navbar">
+      <div id="menuToggle" class="hamburger menuToggle">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="top_menu">
+        <div class="logo">
+          <a href="index.html">DROIT</a>
+        </div>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-bell"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <span class="icon"><i class="fas fa-home"></i></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="latest.html">
+              <span class="icon"><i class="fas fa-window-maximize"></i></span>
+              <span class="title">Latest</span>
+            </a>
+          </li>
+          <li>
+            <a href="closed.html">
+              <span class="icon"><i class="fas fa-close"></i></span>
+              <span class="title">Closed</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <span class="icon"><i class="fas fa-gear"></i></span>
+              <span class="title">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="active">
+              <span class="icon"><i class="fas fa-user"></i></span>
+              <span class="title">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="pageIndicator">
+      <h1>PROFILE</h1>
+    </div>
+    <div class="main_container">
+      <h2 class="white">YOUR INFORMATION</h2>
+      <div class="gridContainer60">
+        <div class="item card">
+          <form>
+            <label for="role">User Role</label>
+            <br />
+            <input id="role" type="text" />
+            <br />
+            <label for="fullName">Full Name</label>
+            <br />
+            <input id="fullName" type="text" />
+            <br />
+            <label for="mail">E-Mail</label>
+            <br />
+            <input id="mail" type="text" />
+            <br />
+            <label for="number">Mobile</label>
+            <br />
+            <input id="number" type="text" />
+            <br />
+            <label for="dob">Birthdate</label>
+            <br />
+            <input id="dob" type="text" />
+            <br />
+            <label for="address">Address</label>
+            <br />
+            <input id="address" type="text" />
+            <br />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="item card">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente
+          adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae
+          aspernatur!
+        </div>
+      </div>
+    </div>
+
+    <!-- script-->
+    <script src="assets/SCRIPT/dashboard.js"></script>
+    <script src="assets/SCRIPT/firebase.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(toggleNav);
+    </script>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDdi476d9Zkv-tGmbgwLg5Q0Fc-d2Oc2jQ",
+        authDomain: "webtechassessment2.firebaseapp.com",
+        databaseURL: "https://webtechassessment2.firebaseio.com",
+        projectId: "webtechassessment2",
+        storageBucket: "webtechassessment2.appspot.com",
+        messagingSenderId: "552477184206",
+        appId: "1:552477184206:web:0620b54b1dd74e6573c09f",
+        measurementId: "G-Q4YNRWMH0M",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- script -->
+  </body>
+</html>
