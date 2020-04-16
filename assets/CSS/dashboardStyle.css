@@ -22,10 +22,19 @@ body {
   background: var(--white);
 }
 
+h1 {
+  padding-top: 66px;
+  padding-right: 8px;
+  text-align: right;
+  font-weight: 100;
+  color: var(--white);
+}
+
 h2 {
   padding-top: 10px;
   padding-left: 8px;
   color: var(--primary);
+  font-weight: 100;
 }
 
 .white {
@@ -261,7 +270,7 @@ nav.active ul li a {
 @media only screen and (max-width: 600px) {
   .main_container {
     width: (100%);
-    margin-top: -60px;
+    margin-top: -66px;
     margin-left: 0px;
     padding: 15px;
     transition: all 0.3s ease;
@@ -288,7 +297,7 @@ nav.active ul li a {
   }
   .main_container {
     width: (100%);
-    margin-top: -60px;
+    margin-top: -66px;
     margin-left: 0px;
     padding: 15px;
     transition: all 0.3s ease;
@@ -324,7 +333,7 @@ nav.active ul li a {
   }
   .main_container {
     width: (100% - 200px);
-    margin-top: -60px;
+    margin-top: -66px;
     margin-left: 200px;
     padding: 15px;
     transition: all 0.3s ease;
