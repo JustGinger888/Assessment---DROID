@@ -1,4 +1,4 @@
-# Droid 
+# Droit
 
 ## 1. Background
 
