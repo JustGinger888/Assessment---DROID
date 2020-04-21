@@ -3,3 +3,5 @@ toggleNav = () => {
         $('nav').toggleClass('active')
     })
 }
+
+// Real Time Database
