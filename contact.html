@@ -254,12 +254,12 @@
             id="numberContact"
           />
 
-          <label><b>Message</b></label>
+          <label><b>Message *</b></label>
           <br>
-          <textarea name="message" id="messageBox" rows="10"></textarea>
+          <textarea name="message" id="messageBox" rows="10" required></textarea>
         </div>
 
-        <button id="contactUs" class="buttonLogin" type="submit" name="signup">
+        <button id="submit" class="buttonLogin" type="submit" name="submit">
           Submit Form
         </button>
       </form>
@@ -293,14 +293,6 @@
     <!-- Footer -->
 
     <!-- script-->
-    <script src="assets/SCRIPT/script.js"></script>
-    <script src="assets/SCRIPT/firebase.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script>
-      $(document).ready(toggleNav);
-    </script>
-
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
@@ -311,6 +303,15 @@
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
 
+    <script src="assets/SCRIPT/script.js"></script>
+    <script src="assets/SCRIPT/firebase.js"></script>
+    <script src="assets/SCRIPT/contact.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(toggleNav);
+    </script>
+    
     <script>
       var firebaseConfig = {
         apiKey: "AIzaSyDdi476d9Zkv-tGmbgwLg5Q0Fc-d2Oc2jQ",
@@ -322,7 +323,6 @@
         appId: "1:552477184206:web:0620b54b1dd74e6573c09f",
         measurementId: "G-Q4YNRWMH0M"
       };
-      firebase.initializeApp(firebaseConfig);
     </script>
     <!-- script -->
   </body>
