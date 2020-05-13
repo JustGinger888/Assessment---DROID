@@ -37,6 +37,18 @@ h2 {
   font-weight: 100;
 }
 
+input[type="text"],
+input[type="password"],
+input[type="passwordRepeat"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 .white {
   color: var(--white);
 }
@@ -272,6 +284,188 @@ nav.active ul li a {
   grid-template-columns: 60% 40%;
   grid-gap: 18px;
 }
+
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--black);
+  border: none;
+  color: var(--primary);
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.buttonLogin {
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.5s;
+}
+.buttonLogin:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+/* Modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: var(--black);
+  float: right;
+  font-size: 38px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.close:hover {
+  color: var(--primaryShade);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: white;
+  color:var(--black);
+}
+
+.modal-body {
+  padding: 2px 16px;
+  background-color: white;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: white;
+  color: white;
+}
+/* Modal */
+
+.ticketInfo input[type=text], 
+.ticketInfo input[type=email],
+.ticketInfo textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--secondary);
+  box-sizing: border-box;
+  background-color: white;
+  transition: 0.4s;
+}
+.userInfo input[type=text]:focus, 
+.userInfo input[type=email]:focus, 
+.userInfo textarea:focus {
+  border: 1px solid var(--primary);
+}
+textarea {
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+textarea:focus{
+  outline: none;
+}
+
+/*Slider*/
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 14px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--secondary);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--secondary);
+  cursor: pointer;
+}
+
+.value {
+  padding-top: 8px;
+  color: var(--primary);
+}
+/*Slider*/
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
