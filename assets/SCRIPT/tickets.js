@@ -14,6 +14,8 @@ var firebaseConfig = {
   var app = firebase.initializeApp(firebaseConfig);
   db = firebase.firestore(app);
 
+  var submit = document.getElementById("submit");
+
 // Listen For Submit
 document.getElementById('ticketForm').addEventListener('submit', submitForm);
 
@@ -50,9 +52,15 @@ function saveMessages(message) {
 }
 
 function GetData() {
-    
-    document.getElementById('gridContainer').innerHTML +=  
-        "<div class='item card'>Lorem</div>";
-
+    document.getElementById('gridContainer').innerHTML = "";
+    db.collection("Tickets").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            document.getElementById('gridContainer').innerHTML +=  
+            "<div class='item card'>"+ doc.data().message +"</div>";
+        });
+    });
+     
 }
 
