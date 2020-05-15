@@ -17,6 +17,23 @@ body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+.bold {
+  color: var(--primary);
+}
+
+#content h2 {
+  color: var(--secondary);
+  font-size: xx-large;
+}
+
+#content p {
+  font-size: medium;
+  line-height: 24px;
+}
+
+ol {
+  color: var(--primary);
+}
 
 #content {
   margin: -2% 5% 2% 5%;
