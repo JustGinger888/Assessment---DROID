@@ -8,7 +8,7 @@ While doing research I came across a survey that said around 82% of tenants have
 
 In a discussion with a local landlord she explained that the reason for this was the difficulty of __ORGANISING__ and keeping on top of these issues that occur with the properties she owns.
 
-In Short, I set out to make an site that allows for the __better maintenance of properties in an attempt to increase the response time for tenant by landlords__. 
+In Short, I set out to make an site that allows for the __better maintenance of properties in an attempt to increase the response time for tenant by landlords__.
 
 This solution is set out to work by allowing tenants to __create tickets of issues found at a propert__, therafter being __displayed to their relevant landlords__, allowing landlords to __find tradesmen suited to fix the issues that are stated in the ticket__  
 

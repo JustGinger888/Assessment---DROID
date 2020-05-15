@@ -1,0 +1,45 @@
+.item0 { grid-area: fill1; }
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.item6 { grid-area: fill2; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'fill1 fill1 header header right right'
+    'menu menu main main right right'
+    'menu menu footer footer fill2 fill2';
+  grid-gap: 10px;
+
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 0px 0;
+  font-size: 30px;
+}
+
+.gridContainer3 {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 40% 60%;
+    grid-gap: 18px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .gridContainer3 {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: 100%;
+        grid-gap: 18px;
+      }
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
